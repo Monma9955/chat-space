@@ -26,4 +26,16 @@
       }
     }
   }
+  .groups {
+    padding: 0 20px;
+    .group {
+      padding: 20px 0;
+      .group__group-name {
+        font-size: 15px;
+      }
+      .group__latest-message {
+        font-size: 11px;
+      }
+    }
+  }
 }
