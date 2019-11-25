@@ -1,0 +1,78 @@
+// index画面チャット画面のCSS
+$MainWidth: calc(100vw - 300px);
+$MessageColor: #434A54;
+
+  .messages {
+    background-color: #fafafa;
+    padding: 100px 40px 0;
+    .message {
+      .message__upper-info {
+        padding-top: 46px;
+        .message__upper-info__talker {
+          float: left;
+          font: {
+            size: 16px;
+            weight: bold;
+          }
+        }
+        .message__upper-info__date {
+          font-size: 12px;
+          color: #999999;
+          float: left;
+        }
+      }
+      .message__text {
+        clear: both;
+        padding-top: 10px;
+        font-size: 14px;
+        color: $MessageColor;
+      }
+    }
+  }
+
+  .form {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 90px;
+    width: $MainWidth;
+    background-color: #ddd;
+    .new_message {
+      padding: 0 40px;
+      .input-box {
+        margin-top: 20px;
+        display: flex;
+        .input-box__text {
+          background-color: white;
+          padding: 0 40px 0 10px;
+          height: 50px;
+          width: 100%;
+          line-height: 50px;
+          font-size: 16px;
+          color: $MessageColor;
+        }
+        .input-box__image {
+          height: 50px;
+          line-height: 50px;
+          position: absolute;
+          right: 148px;
+          input {
+            display: none;
+          }
+          .input-box__image__file {
+          }
+        }
+        .submit-btn {
+          margin-left: 15px;
+          height: 50px;
+          width: 100px;
+          background-color: #38AEF0;
+          line-height: 50px;
+          text-align: center;
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
