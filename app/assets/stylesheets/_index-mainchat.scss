@@ -15,13 +15,13 @@ $MessageColor: #434A54;
     border-bottom: thin solid #eeeeee;
     display: flex;
     justify-content: space-between;
-    .main-header__left-box {
-      .main-header__left-box__current-group {
+    &__left-box {
+      &__current-group {
         font-size: 20px;
         color: #333333;
         margin: 35px 0 15px;
       }
-      .main-header__left-box__member-list {
+      &__member-list {
         margin-top: 15px;
         font-size: 12px;
         color: #999999;
@@ -30,7 +30,7 @@ $MessageColor: #434A54;
         }
       }
     }
-    .main-header__edit-btn {
+    &__edit-btn {
       border: solid thin deepskyblue;
       margin: 28px 0 0;
       padding: 0 20px;
@@ -45,22 +45,22 @@ $MessageColor: #434A54;
     background-color: #fafafa;
     padding: 100px 40px 0;
     .message {
-      .message__upper-info {
+      &__upper-info {
         padding-top: 46px;
-        .message__upper-info__talker {
+        &__talker {
           float: left;
           font: {
             size: 16px;
             weight: bold;
           }
         }
-        .message__upper-info__date {
+        &__date {
           font-size: 12px;
           color: #999999;
           float: left;
         }
       }
-      .message__text {
+      &__text {
         clear: both;
         padding-top: 10px;
         font-size: 14px;
@@ -81,7 +81,7 @@ $MessageColor: #434A54;
       .input-box {
         margin-top: 20px;
         display: flex;
-        .input-box__text {
+        &__text {
           background-color: white;
           padding: 0 40px 0 10px;
           height: 50px;
@@ -90,7 +90,7 @@ $MessageColor: #434A54;
           font-size: 16px;
           color: $MessageColor;
         }
-        .input-box__image {
+        &__image {
           height: 50px;
           line-height: 50px;
           position: absolute;
