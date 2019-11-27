@@ -11,14 +11,14 @@
     padding: 0 20px;
     background-color: #253141;
     line-height: 100px;
-    .side-header__box {
+    &__box {
       display: flex;
       justify-content: space-between;
-      .side-header__box__user-name {
+      &__user-name {
         font-size: 16px;
         width: 50%;
       }
-      .side-header__box__menu {
+      &__menu {
         display: flex;
         .ffff {
           color: #ffff;
@@ -30,10 +30,10 @@
     padding: 0 20px;
     .group {
       padding: 20px 0;
-      .group__group-name {
+      &__group-name {
         font-size: 15px;
       }
-      .group__latest-message {
+      &__latest-message {
         font-size: 11px;
       }
     }
