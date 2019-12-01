@@ -7,7 +7,6 @@ $MessageColor: #434A54;
   width: $MainWidth;
   .main-header {
     position: fixed;
-    top: 0;
     right: 0;
     width: calc(#{$MainWidth} - 80px);
     padding: 0 40px;
@@ -29,7 +28,7 @@ $MessageColor: #434A54;
       }
     }
     &__edit-btn {
-      border: solid thin deepskyblue;
+      border: solid thin $light_blue;
       margin: 28px 0 0;
       padding: 0 20px;
       height: 40px;
@@ -101,7 +100,7 @@ $MessageColor: #434A54;
           margin-left: 15px;
           height: 50px;
           width: 100px;
-          background-color: #38AEF0;
+          background-color: $light_blue;
           line-height: 50px;
           text-align: center;
           color: white;
