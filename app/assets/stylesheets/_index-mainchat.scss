@@ -7,7 +7,6 @@ $MessageColor: #434A54;
   width: $MainWidth;
   .main-header {
     position: fixed;
-    top: 0;
     right: 0;
     width: calc(#{$MainWidth} - 80px);
     padding: 0 40px;
