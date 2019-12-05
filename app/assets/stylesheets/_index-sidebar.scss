@@ -30,6 +30,10 @@
     padding: 0 20px;
     .group {
       padding: 20px 0;
+      a {
+        color: $white;
+        text-decoration: none;
+      }
       &__group-name {
         font-size: 15px;
       }
