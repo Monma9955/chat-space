@@ -21,11 +21,13 @@
           this is a #{i} th message
 
   .form
-    .new_message
-      .input-box
-        %input.input-box__text{:type => "text", :placeholder => "type a message"}
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input.input-box__image__file{type: "file"}
-        = link_to "Send", "#", class: "submit-btn"
+    = form_for [@group, @message] do |f|
+      .form__NewMessage
+        .form__NewMessage__box
+          = f.text_field :message, class: 'form__NewMessage__box__text', placeholder: "type a message"
+          .form__NewMessage__box__mask
+            = f.label :image, class: 'form__NewMessage__box__mask__image' do
+              = icon('fas', 'image', class: 'icon')
+              = f.file_field :image, class: 'file'
+        = f.submit 'Send', class: 'form__NewMessage__submit-btn'
 
