@@ -3,11 +3,10 @@ $MainWidth: calc(100vw - 300px);
 $MessageColor: #434A54;
 
 .chat-main {
-  margin-left: 300px;
   width: $MainWidth;
+  float: left;
   .main-header {
-    position: fixed;
-    right: 0;
+    height: 100px;
     width: calc(#{$MainWidth} - 80px);
     padding: 0 40px;
     background-color: white;
@@ -40,10 +39,12 @@ $MessageColor: #434A54;
 
   .messages {
     background-color: #fafafa;
-    padding: 100px 40px 0;
+    padding: 35px 40px 0;
+    height: calc(100vh - 225px);
+    overflow: scroll;
     .message {
+      padding-bottom: 46px;
       &__upper-info {
-        padding-top: 46px;
         &__talker {
           float: left;
           font: {
@@ -52,6 +53,7 @@ $MessageColor: #434A54;
           }
         }
         &__date {
+          margin-left: 10px;
           font-size: 12px;
           color: #999999;
           float: left;
@@ -67,9 +69,6 @@ $MessageColor: #434A54;
   }
 
   .form {
-    position: fixed;
-    right: 0;
-    bottom: 0;
     height: 90px;
     width: $MainWidth;
     background-color: #ddd;

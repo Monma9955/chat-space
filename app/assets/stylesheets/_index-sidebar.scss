@@ -1,6 +1,6 @@
 // Index画面サイドバーのCSS
 .chat-side {
-  position: fixed;
+  float: left;
   height: 100vh;
   width: 300px;
   background-color: $side_blue_light;
