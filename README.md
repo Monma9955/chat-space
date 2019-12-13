@@ -35,7 +35,7 @@
 - belongs_to :group
 - belongs_to :user
 
-## postテーブル
+## messageテーブル
 
 |Column|Type|Options|
 |------|----|-------|
