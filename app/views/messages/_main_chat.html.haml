@@ -10,15 +10,7 @@
     = link_to "Edit", "#", class: "main-header__edit-btn"
 
   .messages
-    - @messages.each do |message|
-      .message
-        .message__upper-info
-          .message__upper-info__talker
-            = message.user.name
-          .message__upper-info__date
-            = message.created_at.strftime("%Y/%m/%d(%a) %T")
-        .message__text
-          = message.message
+    = render @messages
 
   .form
     = form_for [@group, @message] do |f|

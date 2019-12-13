@@ -59,11 +59,13 @@ $MessageColor: #434A54;
           float: left;
         }
       }
-      &__text {
-        clear: both;
-        padding-top: 10px;
-        font-size: 14px;
-        color: $MessageColor;
+      &__lower {
+        &__text {
+          clear: both;
+          padding-top: 10px;
+          font-size: 14px;
+          color: $MessageColor;
+        }
       }
     }
   }
