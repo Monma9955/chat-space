@@ -10,7 +10,6 @@ $(function() {
               </div>
               `
     search_result.append(html);
-    console.log(html);
   }
 
   function FormNoUser() {
@@ -19,7 +18,6 @@ $(function() {
               <p class="chat-group-user__name">ユーザーが見つかりません</p>
               </div>`
     search_result.append(html);
-    console.log(html);
   }
 
   $('#user-search-field').on('keyup', function(){
