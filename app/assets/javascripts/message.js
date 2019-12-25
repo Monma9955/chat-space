@@ -1,44 +1,46 @@
 $(function(){
+
   function buildHTML(message) {
-    if( message.image ) {
-      var html = 
-      `<div class='message'>
-        <div class='message__upper-info'>
-          <div class='message__upper-info__talker'>
-            ${message.user_name}
-          </div>
-          <div class='message__upper-info__date'>
-            ${message.created_at}
-          </div>
+    var htmlUpper =
+    `<div class="message" data-message-id=${message.id} >
+      <div class="message__upper-info">
+        <div class="message__upper-info__talker">
+          ${message.user_name}
         </div>
-        <div class='message__lower'>
-          <p class='message__lower__text'>
-            ${message.message}
-          </p>
-          <img class="message__lower__image" src=${message.image}>
+        <div class="message__upper-info__date">
+          ${message.created_at}
         </div>
       </div>`
-      return html;
-    } else {
+    if( message.message && message.image) {
+      var html = 
+      htmlUpper +
+      `<div class='message__lower'>
+        <p class='message__lower__text'>
+          ${message.message}
+        </p>
+        <img class="message__lower__image" src=${message.image}>
+      </div>
+    </div>`
+    } else if (message.message) {
       var html =
-       `<div class='message'>
-          <div class='message__upper-info'>
-            <div class='message__upper-info__talker'>
-              ${message.user_name}
-            </div>
-            <div class='message__upper-info__date'>
-              ${message.created_at}
-            </div>
-          </div>
-          <div class='message__lower'>
-            <p class='message__lower__text'>
-              ${message.message}
-            </p>
-          </div>
-        </div>`
-      return html;
+      htmlUpper +
+      `<div class='message__lower'>
+        <p class='message__lower__text'>
+          ${message.message}
+        </p>
+      </div>
+    </div>`
+    } else if (message.image) {
+      var html =
+      htmlUpper +
+      `<div class='message__lower'>
+        <img class="message__lower__image" src=${message.image}>
+      </div>
+    </div>`
     };
-  }
+    return html;
+  };
+
   $('#new_message').on('submit', function(e) {
     e.preventDefault();
     var formData = new FormData(this);
@@ -62,4 +64,5 @@ $(function(){
       alert("メッセージ送信に失敗しました");
     })
   })
-})
+
+});
