@@ -18,3 +18,4 @@
 public/uploads/*.DS_Store
 public/uploads/*
 *.jpg
+config/secrets.yml
